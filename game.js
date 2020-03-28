@@ -1,24 +1,24 @@
-function preload() {
-    // Load in the sprite here!
-    this.load.image('codey', '../assets/sprites/codey.png');
-    this.load.image('sky', '../assets/images/sky.jpg');
-    }
+const gameState = {};
 
-  function create() {
-    // Create a sprite game object here!
-    this.add.sprite(40, 80, 'codey');
-    this.add.image(200, 200, 'sky');
-  }
-  
-  const config = {
+function create() {
+  gameState.circle = this.add.circle(40, 100, 10, 0xff9999)
+}
+
+function update() {
+  gameState.circle.y += 1
+}
+
+const config = {
 	type: Phaser.AUTO,
 	width: 450,
 	height: 600,
-	backgroundColor: "#5f2a55",
+	backgroundColor: "#99ff99",
 	scene: {
     create,
-    preload
+    update
 	}
 }
 
-  const game = new Phaser.Game(config)
+const game = new Phaser.Game(config)
+
+  
