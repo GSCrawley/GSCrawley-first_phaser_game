@@ -1,7 +1,7 @@
 const gameState = {}
 
 function preload() {
-  this.load.image('codey', 'https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/codey.png');
+  this.load.image('codey', '/assets/sprites/codey.png');
 }
 
 function create() {
