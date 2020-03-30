@@ -1,7 +1,7 @@
 const gameState = {}
 
 function preload() {
-  this.load.image('codey', 'assets/sprites/codey.png'),
+  this.load.image('codey', '../assets/sprites/codey.png'),
   this.load.audio('incredible', 'https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/incredible.mp3'),
   this.load.audio('awesome', 'https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/reallyawesome.mp3');
 }
@@ -17,6 +17,7 @@ function create() {
   gameState.cursors = this.input.keyboard.createCursorKeys()
   gameState.incredibleBox.setInteractive();
   gameState.awesomeBox.setInteractive();
+  gameState.codey.setInteractive();
 }
 
 function update() {
@@ -45,7 +46,7 @@ function update() {
 const config = {
 	type: Phaser.AUTO,
 	width: 400,
-	height: 500,
+	height: 550,
 	backgroundColor: "0xdda0dd",
 	scene: {
 	  preload,
